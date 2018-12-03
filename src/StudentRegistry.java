@@ -17,5 +17,10 @@ public class StudentRegistry {
         students.add(newStudent);
     }
 
+    public int getNumberOfStudents()
+    {
+        return this.students.size();
+    }
+
 
 }

@@ -35,12 +35,14 @@ public class TestingStudent {
                     String studentInfo = fileReader.nextLine();
                     String[] parsedInfo = studentInfo.split(",");
 
-                    Student newStudent = new Student(Integer.parseInt(parsedInfo[0]),
-                                    parsedInfo[1],
-                                    parsedInfo[2],
-                                    parsedInfo[3]);
-
-                    studentRegistry.addStudent(newStudent);
+                    if (!parsedInfo[0].equalsIgnoreCase("student"))
+                    {
+                        Student newStudent = new Student(Integer.parseInt(parsedInfo[0]),
+                                parsedInfo[1],
+                                parsedInfo[2],
+                                parsedInfo[3]);
+                        studentRegistry.addStudent(newStudent);
+                    }
                 }
 
                 //4. close the Scanner
