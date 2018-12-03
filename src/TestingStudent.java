@@ -18,6 +18,8 @@ public class TestingStudent {
 //        for (Student student:students)
 //            System.out.println(student);
 
+        StudentRegistry studentRegistry = new StudentRegistry();
+
         //To read from the file
         //1. create a file
         File fileToRead = new File("students.csv");
@@ -33,17 +35,23 @@ public class TestingStudent {
                     String studentInfo = fileReader.nextLine();
                     String[] parsedInfo = studentInfo.split(",");
 
-                    Student newStudent = new Student(parsedInfo[0],
+                    Student newStudent = new Student(Integer.parseInt(parsedInfo[0]),
                                     parsedInfo[1],
                                     parsedInfo[2],
                                     parsedInfo[3]);
+
+                    studentRegistry.addStudent(newStudent);
                 }
 
                 //4. close the Scanner
+                fileReader.close();
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
 
+            System.out.printf("The student registry has %d students.%n",
+                                studentRegistry.getNumberOfStudents());
 
         }
 
