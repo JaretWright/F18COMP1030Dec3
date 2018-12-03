@@ -91,4 +91,10 @@ public class Student {
             throw new IllegalArgumentException("course must be in the pattern COMP1008," +
                     "grade must be 0-100");
     }
+
+    @Override
+    public String toString()
+    {
+        return String.format("Student # %-6d %s %s",studentNum, firstName, lastName);
+    }
 }
