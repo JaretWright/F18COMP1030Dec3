@@ -34,4 +34,16 @@ public class StudentRegistry {
         return studentString.toString();
     }
 
+    /**
+     * To return a Student object based on the student number
+     */
+    public Student getStudent(int studentNum)
+    {
+        for (Student student:students) {
+            if (student.getStudentNum() == studentNum)
+                return student;
+        }
+        return null;
+    }
+
 }

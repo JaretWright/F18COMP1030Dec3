@@ -97,4 +97,18 @@ public class Student {
     {
         return String.format("Student # %-6d %s %s",studentNum, firstName, lastName);
     }
+
+    /**
+     * This method will return the average of the student
+     */
+    public double getAverage()
+    {
+        double total=0;
+        for (String courseCode:grades.keySet()){
+//            System.out.printf("Course code: %s grade: %d%n", courseCode,
+//                                                grades.get(courseCode));
+            total += grades.get(courseCode);
+        }
+        return total/grades.size();
+    }
 }

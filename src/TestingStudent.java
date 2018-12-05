@@ -59,6 +59,24 @@ public class TestingStudent {
 
         }
 
+        Student donny = studentRegistry.getStudent(10020);
+        System.out.println("\n\nThe student accessed is: "+donny);
+
+        donny.addGrade("COMP1030",97);
+        donny.addGrade("COMP1008",98);
+        donny.addGrade("ENGE1030",76);
+        donny.addGrade("CHEM1001",82);
+
+        System.out.printf("The average grade for Donny is %.1f%%%n",donny.getAverage());
+
+        readInGrades();
 
     }
+
+    public static void readInGrades()
+    {
+
+    }
+
+
 }
