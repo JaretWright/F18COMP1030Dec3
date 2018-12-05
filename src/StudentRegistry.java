@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class StudentRegistry {
-    ArrayList<Student> students;
+    private ArrayList<Student> students;
 
     /**
      * The constructor will initialize the ArrayList and allocation
@@ -22,5 +22,16 @@ public class StudentRegistry {
         return this.students.size();
     }
 
+    public String getStudentsString()
+    {
+        StringBuilder studentString = new StringBuilder();
+
+        for (Student student:students)
+        {
+            studentString.append(String.format("%s%n",student));
+        }
+
+        return studentString.toString();
+    }
 
 }

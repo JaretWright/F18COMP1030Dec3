@@ -54,6 +54,8 @@ public class TestingStudent {
 
             System.out.printf("The student registry has %d students.%n",
                                 studentRegistry.getNumberOfStudents());
+            System.out.print("The students in the class are:\n");
+            System.out.print(studentRegistry.getStudentsString());
 
         }
 

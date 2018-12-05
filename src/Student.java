@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class Student {
     private int studentNum;
     private String firstName, lastName, phone;
-    HashMap<String, Integer> grades;
+    private HashMap<String, Integer> grades;
 
     /**
      * This is the constructor, when it is called, it allocates system resources for a
